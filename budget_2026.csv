@@ -1,0 +1,606 @@
+category,department,department_code,expense_name,expense_code,amount
+Buildings & Grounds,Building Inspection,5240,DENTAL INS,163,5776
+Buildings & Grounds,Building Inspection,5240,DISABILITY INS,162,1700
+Buildings & Grounds,Building Inspection,5240,EQUIPMENT EXPENSE,355,400
+Buildings & Grounds,Building Inspection,5240,FICA,131,28050
+Buildings & Grounds,Building Inspection,5240,GASOLINE/DIESEL FUEL,397,2000
+Buildings & Grounds,Building Inspection,5240,HEALTH INS,160,109204
+Buildings & Grounds,Building Inspection,5240,INSURANCE ISF ALLOCATION,572,13140
+Buildings & Grounds,Building Inspection,5240,IT CAPITAL ISF ALLOCATION,573,1295
+Buildings & Grounds,Building Inspection,5240,IT OPERATING ISF ALLOCATION,570,35965
+Buildings & Grounds,Building Inspection,5240,LIFE INS,161,1766
+Buildings & Grounds,Building Inspection,5240,LONGEVITY,135,1710
+Buildings & Grounds,Building Inspection,5240,OFFICE SUPPLIES & POSTAGE,310,900
+Buildings & Grounds,Building Inspection,5240,OPERATING MATERIALS & SUPPLIES,340,5000
+Buildings & Grounds,Building Inspection,5240,OVERTIME,115,4868
+Buildings & Grounds,Building Inspection,5240,PUBLIC INFORMATION & EDUCATION,345,200
+Buildings & Grounds,Building Inspection,5240,"PUBLICATIONS, DUES",320,2000
+Buildings & Grounds,Building Inspection,5240,SALARIES & WAGES - BLDG INSP,110,360086
+Buildings & Grounds,Building Inspection,5240,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,440
+Buildings & Grounds,Building Inspection,5240,TRAINING & TRAVEL,325,10000
+Buildings & Grounds,Building Inspection,5240,UNIFORMS & PROTECTIVE GEAR,323,2000
+Buildings & Grounds,Building Inspection,5240,VEHICLE EXPENSE,335,3000
+Buildings & Grounds,Building Inspection,5240,WRS,132,26400
+Buildings & Grounds,Maintenance Building,5164,BLDG CUSTODIAL SUPPLIES,360,2500
+Buildings & Grounds,Maintenance Building,5164,DISABILITY INS,162,167
+Buildings & Grounds,Maintenance Building,5164,FICA,131,2062
+Buildings & Grounds,Maintenance Building,5164,INSURANCE ISF ALLOCATION,572,850
+Buildings & Grounds,Maintenance Building,5164,LIFE INS,161,39
+Buildings & Grounds,Maintenance Building,5164,REPAIR & MAINTENANCE SUPPLIES,350,5000
+Buildings & Grounds,Maintenance Building,5164,REPAIRS & MAINTENANCE BY OTHER,240,29250
+Buildings & Grounds,Maintenance Building,5164,SALARIES & WAGES,110,26952
+Buildings & Grounds,Maintenance Building,5164,UTILITIES,365,38575
+Buildings & Grounds,Maintenance Building,5164,WRS,132,1941
+Buildings & Grounds,New City Hall,5165,B&G ON CALL PAY,191,19822
+Buildings & Grounds,New City Hall,5165,BLDG CUSTODIAL SUPPLIES,360,8000
+Buildings & Grounds,New City Hall,5165,DENTAL INS,163,2630
+Buildings & Grounds,New City Hall,5165,DISABILITY INS,162,943
+Buildings & Grounds,New City Hall,5165,EQUIPMENT EXPENSE,355,2000
+Buildings & Grounds,New City Hall,5165,FICA,131,18454
+Buildings & Grounds,New City Hall,5165,GASOLINE/DIESEL FUEL,397,805
+Buildings & Grounds,New City Hall,5165,HEALTH INS,160,50769
+Buildings & Grounds,New City Hall,5165,INSURANCE ISF ALLOCATION,572,25445
+Buildings & Grounds,New City Hall,5165,IT CAPITAL ISF ALLOCATION,573,760
+Buildings & Grounds,New City Hall,5165,IT OPERATING ISF ALLOCATION,570,22810
+Buildings & Grounds,New City Hall,5165,LIFE INS,161,1033
+Buildings & Grounds,New City Hall,5165,LONGEVITY,135,1800
+Buildings & Grounds,New City Hall,5165,OTHER CONTRACTUAL SERVICES,290,600
+Buildings & Grounds,New City Hall,5165,OVERTIME,115,6811
+Buildings & Grounds,New City Hall,5165,REPAIR & MAINT - BY OTHERS,240,47600
+Buildings & Grounds,New City Hall,5165,REPAIR AND MAINT SUPPLIES,350,8000
+Buildings & Grounds,New City Hall,5165,SALARIES & WAGES-NEW CITY HALL,110,212801
+Buildings & Grounds,New City Hall,5165,UNIFORMS & PROTECTIVE GEAR,323,1100
+Buildings & Grounds,New City Hall,5165,UTILITIES,365,103000
+Buildings & Grounds,New City Hall,5165,VEHICLE EXPENSE,335,1000
+Buildings & Grounds,New City Hall,5165,WRS,132,15614
+Buildings & Grounds,Safety Building,5162,BLDG CUSTODIAL SUPPLIES,360,2000
+Buildings & Grounds,Safety Building,5162,REPAIR & MAINT SUPPLIES,350,2500
+Buildings & Grounds,Safety Building,5162,REPAIRS & MAINT - BY OTHERS,240,11325
+Buildings & Grounds,Safety Building,5162,UTILITIES,365,28840
+Capital Debt,Transfers,5920,OTHER TRANS TO FUND 400,954,5387096
+Capital Debt,Transfers,5920,TRANSFER TO CAP PROJ - EQUIP,951,565200
+Community,Community Center,5514,BLDG CUSTODIAL SUPPLIES,360,7000
+Community,Community Center,5514,EQUIPMENT EXPENSE,355,2000
+Community,Community Center,5514,FICA,131,1697
+Community,Community Center,5514,INSURANCE ISF ALLOCATION,572,5685
+Community,Community Center,5514,OTHER CONTRACTUAL SERVICES,290,500
+Community,Community Center,5514,PT/LTE/SEASONAL WAGES,120,22178
+Community,Community Center,5514,REPAIR & MAINT SUPPLIES,350,10000
+Community,Community Center,5514,REPAIRS & MAINT - BY OTHERS,240,26200
+Community,Community Center,5514,UTILITIES & PAY TELEPHONE,365,38625
+Community,HNI,5420,DISABILITY INS,162,400
+Community,HNI,5420,FICA,131,8029
+Community,HNI,5420,GRANTS TO OTHERS,389,63000
+Community,HNI,5420,INSURANCE ISF ALLOCATION,572,1652
+Community,HNI,5420,IT CAPITAL ISF ALLOCATION,573,305
+Community,HNI,5420,IT OPERATING ISF ALLOCATION,570,6800
+Community,HNI,5420,LIFE INS,161,51
+Community,HNI,5420,OPERATING MATERIALS & SUPP,340,2000
+Community,HNI,5420,PER DIEMS - COMMISSIONS & BDS,140,1280
+Community,HNI,5420,PT/LTE/SEASONAL,120,19350
+Community,HNI,5420,PUBLIC INFORMATION & EDUCATION,345,300
+Community,HNI,5420,"PUBLICATIONS, DUES",320,445
+Community,HNI,5420,SALARIES & WAGES-HNI,110,85606
+Community,HNI,5420,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,400
+Community,HNI,5420,TRAINING & TRAVEL,325,2500
+Community,HNI,5420,VEHICLE USE REIMBURSEMENT,330,280
+Community,HNI,5420,WRS,132,6164
+Community,Neighborhood Hub,5515,BLDG CUSTODIAL SUPPLIES,360,4000
+Community,Neighborhood Hub,5515,DISABILITY INS,162,167
+Community,Neighborhood Hub,5515,EQUIPMENT EXPENSE,355,7500
+Community,Neighborhood Hub,5515,FICA,131,2062
+Community,Neighborhood Hub,5515,INSURANCE ISF ALLOCATION,572,4820
+Community,Neighborhood Hub,5515,LIFE INS,161,39
+Community,Neighborhood Hub,5515,REPAIR & MAINT SUPPLIES,350,5000
+Community,Neighborhood Hub,5515,REPAIRS & MAINT - BY OTHERS,240,11500
+Community,Neighborhood Hub,5515,SALARIES & WAGES,110,26952
+Community,Neighborhood Hub,5515,UTILITIES & PAY TELEPHONE,365,24720
+Community,Neighborhood Hub,5515,WRS,132,1941
+Community,Senior Center,5460,DENTAL INS,163,8436
+Community,Senior Center,5460,DISABILITY INS,162,2681
+Community,Senior Center,5460,EQUIPMENT EXPENSE,355,2250
+Community,Senior Center,5460,FICA,131,46497
+Community,Senior Center,5460,GASOLINE/DIESEL FUEL,397,400
+Community,Senior Center,5460,HEALTH INS,160,162391
+Community,Senior Center,5460,INSURANCE ISF ALLOCATION,572,17212
+Community,Senior Center,5460,IT CAPITAL ISF ALLOCATION,573,2855
+Community,Senior Center,5460,IT OPERATING ISF ALLOCATION,570,45490
+Community,Senior Center,5460,LIFE INS,161,2110
+Community,Senior Center,5460,LONGEVITY,135,4410
+Community,Senior Center,5460,NUTRITION PROGRAM,386,3500
+Community,Senior Center,5460,OFFICE SUPPLIES & POSTAGE,310,1650
+Community,Senior Center,5460,OPERATING MATERIALS & SUPPLIES,340,600
+Community,Senior Center,5460,OTHER CONTRACTUAL,290,13940
+Community,Senior Center,5460,PER DIEMS - COMM ON AGING,140,900
+Community,Senior Center,5460,PT/LTE/SEASONAL WAGES,120,18303
+Community,Senior Center,5460,PUBLIC INFORMATION & EDUCATION,345,1000
+Community,Senior Center,5460,"PUBLICATIONS, DUES",320,420
+Community,Senior Center,5460,REPAIRS & MAINT - BY OTHERS,240,1000
+Community,Senior Center,5460,SALARIES & WAGES - SENIOR CTR,110,585082
+Community,Senior Center,5460,SENIOR PROGRAMS EXPENSE,387,2500
+Community,Senior Center,5460,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,1035
+Community,Senior Center,5460,TRAINING & TRAVEL,325,2600
+Community,Senior Center,5460,"VEHICLE EXPENSE (G&O, REPAIRS)",335,200
+Community,Senior Center,5460,VEHICLE USE REIMBURSEMENT,330,400
+Community,Senior Center,5460,VOLUNTEER PROGRAM EXP,391,2500
+Community,Senior Center,5460,WRS,132,42444
+Fire/EMS,Fire Department,5220,COMMUNICATIONS EXPENSE,363,11845
+Fire/EMS,Fire Department,5220,DENTAL INS,163,22715
+Fire/EMS,Fire Department,5220,DISABILITY INS,162,8098
+Fire/EMS,Fire Department,5220,EQUIPMENT EXPENSE,355,25000
+Fire/EMS,Fire Department,5220,FICA,131,205120
+Fire/EMS,Fire Department,5220,GASOLINE/DIESEL FUEL,397,41200
+Fire/EMS,Fire Department,5220,HEALTH INS,160,458481
+Fire/EMS,Fire Department,5220,HOLIDAY PREMIUM,190,26174
+Fire/EMS,Fire Department,5220,INSURANCE ISF ALLOCATION,572,159823
+Fire/EMS,Fire Department,5220,IT CAPITAL ISF ALLOCATION,573,21755
+Fire/EMS,Fire Department,5220,IT OPERATING ISF ALLOCATION,570,243695
+Fire/EMS,Fire Department,5220,LEASE/RENTAL COSTS,505,9270
+Fire/EMS,Fire Department,5220,LIFE INS,161,4964
+Fire/EMS,Fire Department,5220,LONGEVITY,135,7740
+Fire/EMS,Fire Department,5220,MEDICAL/EMS SUPPLIES,341,10815
+Fire/EMS,Fire Department,5220,OFFICE SUPPLIES & POSTAGE,310,3090
+Fire/EMS,Fire Department,5220,OPERATING MATERIALS & SUPPLIES,340,10300
+Fire/EMS,Fire Department,5220,OTHER CONTRACTUAL SERVICES,290,8500
+Fire/EMS,Fire Department,5220,OVERTIME,115,215968
+Fire/EMS,Fire Department,5220,POC SERVICES,150,614374
+Fire/EMS,Fire Department,5220,PROFESSIONAL SERVICES,210,515
+Fire/EMS,Fire Department,5220,PROTECTIVE GEAR,324,66545
+Fire/EMS,Fire Department,5220,PT/LTE/SEASONAL WAGES,120,23400
+Fire/EMS,Fire Department,5220,PUBLIC INFORMATION & EDUCATION,345,5150
+Fire/EMS,Fire Department,5220,PUBLIC NOTICES/ADS,250,515
+Fire/EMS,Fire Department,5220,"PUBLICATIONS, DUES",320,5800
+Fire/EMS,Fire Department,5220,REPAIR & MAINT SUPPLIES,350,3180
+Fire/EMS,Fire Department,5220,REPAIRS & MAINT - BY OTHERS,240,12000
+Fire/EMS,Fire Department,5220,SALARIES & WAGES - FIRE,110,1786160
+Fire/EMS,Fire Department,5220,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,20675
+Fire/EMS,Fire Department,5220,TAXABLE CLOTHING ALLOWANCE,164,7500
+Fire/EMS,Fire Department,5220,TRAINING & TRAVEL,325,26045
+Fire/EMS,Fire Department,5220,TUITION REIMBURSEMENT,326,20155
+Fire/EMS,Fire Department,5220,UNIFORMS,323,11800
+Fire/EMS,Fire Department,5220,UTILITIES,365,7060
+Fire/EMS,Fire Department,5220,"VEHICLE EXPENSE (G&O, REPAIRS)",335,60000
+Fire/EMS,Fire Department,5220,WRS,132,365801
+Fire/EMS,Fire Station #2,5167,BLDG CUSTODIAL SUPPLIES,360,4000
+Fire/EMS,Fire Station #2,5167,EQUIPMENT EXPENSE,355,1500
+Fire/EMS,Fire Station #2,5167,REPAIR & MAINT SUPPLIES,350,4000
+Fire/EMS,Fire Station #2,5167,REPAIRS & MAINT - BY OTHERS,240,19550
+Fire/EMS,Fire Station #2,5167,UTILITIES,365,29355
+Fire/EMS,Fire Station #3,5168,BLDG CUSTODIAL SUPPLIES,360,4000
+Fire/EMS,Fire Station #3,5168,EQUIPMENT EXPENSE,355,1000
+Fire/EMS,Fire Station #3,5168,REPAIR & MAINT SUPPLIES,350,2500
+Fire/EMS,Fire Station #3,5168,REPAIRS & MAINT - BY OTHERS,240,19500
+Fire/EMS,Fire Station #3,5168,UTILITIES,365,37500
+Fire/EMS,Other Public Safety,5290,DANE COM/ANALOG TACTICAL,269,146500
+Fire/EMS,Other Public Safety,5290,FITCHRONA EMS CONTRIBUTION,270,1450629
+Fire/EMS,Other Public Safety,5290,PER DIEMS - POLICE & FIRE COMM,140,1500
+Fire/EMS,Other Public Safety,5290,WEIGHTS & MEASURES,265,6000
+General Government,Admin,5115,Admin Holiday Premium,190,93
+General Government,Admin,5115,DENTAL INS,163,4236
+General Government,Admin,5115,DISABILITY INS,162,1200
+General Government,Admin,5115,EQUIPMENT OPERATING EXPENSE,355,100
+General Government,Admin,5115,FICA,131,32312
+General Government,Admin,5115,GASOLINE/DIESEL FUEL,397,350
+General Government,Admin,5115,HEALTH INS,160,79872
+General Government,Admin,5115,INSURANCE ISF ALLOCATION,572,3750
+General Government,Admin,5115,IT CAPITAL ISF ALLOCATION,573,915
+General Government,Admin,5115,IT OPERATING ISF ALLOCATION,570,22515
+General Government,Admin,5115,LIFE INS,161,1189
+General Government,Admin,5115,LONGEVITY,135,1170
+General Government,Admin,5115,OFFICE SUPPLIES & POSTAGE,310,350
+General Government,Admin,5115,OPERATING MATERIALS & SUPP,340,300
+General Government,Admin,5115,PUBLIC INFORMATION & EDUCATION,345,9000
+General Government,Admin,5115,PUBLICATIONS & DUES,320,2625
+General Government,Admin,5115,SALARIES & WAGES-ADMIN,110,421117
+General Government,Admin,5115,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,125
+General Government,Admin,5115,TRAINING & TRAVEL,325,8000
+General Government,Admin,5115,"VEHICLE EXPENSE (G&O, REPAIRS)",335,500
+General Government,Admin,5115,VEHICLE USE REIMBURSEMENT,330,875
+General Government,Admin,5115,WRS,132,30411
+General Government,Assessing,5153,DENTAL INS,163,5259
+General Government,Assessing,5153,DISABILITY INS,162,1991
+General Government,Assessing,5153,EQUIPMENT OPERATING EXPENSE,355,50
+General Government,Assessing,5153,FICA,131,33030
+General Government,Assessing,5153,GASOLINE/DIESEL FUEL,397,700
+General Government,Assessing,5153,HEALTH INS,160,101537
+General Government,Assessing,5153,INSURANCE ISF ALLOCATION,572,12260
+General Government,Assessing,5153,IT CAPITAL ISF ALLOCATION,573,1525
+General Government,Assessing,5153,IT OPERATING ISF ALLOCATION,570,32570
+General Government,Assessing,5153,LIFE INS,161,749
+General Government,Assessing,5153,OFFICE SUPPLIES & POSTAGE,310,3755
+General Government,Assessing,5153,OPERATING MATERIALS & SUPPLIES,340,300
+General Government,Assessing,5153,OTHER CONTRACTUAL,290,27850
+General Government,Assessing,5153,OVERTIME WAGES,115,4117
+General Government,Assessing,5153,PER DIEMS - BOR,140,630
+General Government,Assessing,5153,"PUBLICATIONS, DUES",320,1070
+General Government,Assessing,5153,SALARIES & WAGES-ASSESSORS OFC,110,427643
+General Government,Assessing,5153,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,20400
+General Government,Assessing,5153,TRAINING & TRAVEL,325,3600
+General Government,Assessing,5153,TUITION REIMBURSEMENT,326,650
+General Government,Assessing,5153,UNIFORMS & PROTECTIVE GEAR,323,240
+General Government,Assessing,5153,"VEHICLE EXPENSE (G&O, REPAIRS)",335,1000
+General Government,Assessing,5153,VEHICLE USE REIMBURSEMENT,330,350
+General Government,Assessing,5153,WRS,132,31087
+General Government,City Clerk,5142,DENTAL INS,163,4748
+General Government,City Clerk,5142,DISABILITY INS,162,1486
+General Government,City Clerk,5142,ELECTION COSTS,390,46075
+General Government,City Clerk,5142,FICA,131,22825
+General Government,City Clerk,5142,HEALTH INS,160,90705
+General Government,City Clerk,5142,INSURANCE ISF ALLOCATION,572,3794
+General Government,City Clerk,5142,IT CAPITAL ISF ALLOCATION,573,1220
+General Government,City Clerk,5142,IT OPERATING ISF ALLOCATION,570,29895
+General Government,City Clerk,5142,LEASE/RENTAL COSTS,505,4015
+General Government,City Clerk,5142,LIFE INS,161,1244
+General Government,City Clerk,5142,LONGEVITY BENEFIT,135,765
+General Government,City Clerk,5142,OFFICE SUPPLIES & POSTAGE,310,4800
+General Government,City Clerk,5142,OTHER CONTRACTUAL,290,1080
+General Government,City Clerk,5142,OVERTIME WAGES,115,6945
+General Government,City Clerk,5142,PROFESSIONAL SERVICES,210,2500
+General Government,City Clerk,5142,PT/LTE/SEASONAL WAGES,120,111502
+General Government,City Clerk,5142,PUBLIC NOTICES & ADVERTISEMENT,250,19500
+General Government,City Clerk,5142,"PUBLICATIONS, DUES",320,640
+General Government,City Clerk,5142,SALARIES & WAGES - CLERKS OFFC,110,288069
+General Government,City Clerk,5142,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,29370
+General Government,City Clerk,5142,TRAINING & TRAVEL,325,6400
+General Government,City Clerk,5142,VEHICLE USE REIMBURSEMENT,330,1095
+General Government,City Clerk,5142,WRS,132,21296
+General Government,FACTv,5570,DENTAL INS,163,3336
+General Government,FACTv,5570,DISABILITY INS,162,1193
+General Government,FACTv,5570,FACTv Holiday Premium,190,126
+General Government,FACTv,5570,FICA,131,21724
+General Government,FACTv,5570,GASOLINE/DIESEL FUEL,397,875
+General Government,FACTv,5570,HEALTH INS,160,64081
+General Government,FACTv,5570,INSURANCE ISF ALLOCATION,572,10270
+General Government,FACTv,5570,IT CAPITAL ISF ALLOCATION,573,12565
+General Government,FACTv,5570,IT OPERATING ISF ALLOCATION,570,32970
+General Government,FACTv,5570,LIFE INS,161,744
+General Government,FACTv,5570,LONGEVITY,135,675
+General Government,FACTv,5570,OFFICE SUPPLIES & POSTAGE,310,500
+General Government,FACTv,5570,OPERATING MATERIALS & SUPPLIES,340,9350
+General Government,FACTv,5570,OTHER CONTRACTUAL SERVICES,290,1000
+General Government,FACTv,5570,PT/LTE/SEASONAL WAGES,120,8986
+General Government,FACTv,5570,PUBLIC INFORMATION & EDUCATION,345,1000
+General Government,FACTv,5570,"PUBLICATIONS, DUES",320,1695
+General Government,FACTv,5570,REPAIRS & MAINT - BY OTHERS,240,3000
+General Government,FACTv,5570,REPAIRS & MAINT SUPPLIES,350,3000
+General Government,FACTv,5570,SALARIES & WAGES - CABLE,110,274181
+General Government,FACTv,5570,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,16230
+General Government,FACTv,5570,TRAINING & TRAVEL,325,3500
+General Government,FACTv,5570,VEHICLE EXPENSE,335,2500
+General Government,FACTv,5570,VEHICLE USE REIMBURSEMENT,330,115
+General Government,FACTv,5570,WRS,132,19799
+General Government,Finance,5152,AUDIT & FINANCIAL CONSULTING,212,54090
+General Government,Finance,5152,DENTAL INS,163,5076
+General Government,Finance,5152,DISABILITY INS,162,1491
+General Government,Finance,5152,EQUIPMENT OPERATING EXPENSE,355,50
+General Government,Finance,5152,FICA,131,28569
+General Government,Finance,5152,Finance Holiday Premium,190,311
+General Government,Finance,5152,GASOLINE/DIESEL FUEL,397,175
+General Government,Finance,5152,HEALTH INS,160,102502
+General Government,Finance,5152,INSURANCE ISF ALLOCATION,572,4950
+General Government,Finance,5152,IT CAPITAL ISF ALLOCATION,573,1175
+General Government,Finance,5152,IT OPERATING ISF ALLOCATION,570,24480
+General Government,Finance,5152,LIFE INS,161,887
+General Government,Finance,5152,LONGEVITY BENEFIT,135,1091
+General Government,Finance,5152,OFFICE SUPPLIES & POSTAGE,310,7100
+General Government,Finance,5152,OPERATING MATERIALS & SUPPLIES,340,2405
+General Government,Finance,5152,OTHER CONTRACTUAL,290,1350
+General Government,Finance,5152,OVERTIME WAGES,115,744
+General Government,Finance,5152,PT/LTE/SEASONAL WAGES,120,4415
+General Government,Finance,5152,"PUBLICATIONS, DUES",320,1335
+General Government,Finance,5152,SALARIES & WAGES - FINANCE,110,366883
+General Government,Finance,5152,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,283565
+General Government,Finance,5152,TRAINING & TRAVEL,325,8400
+General Government,Finance,5152,VEHICLE USE REIMBURSEMENT,330,665
+General Government,Finance,5152,WRS,132,26570
+General Government,HR,5143,DENTAL INS,163,4236
+General Government,HR,5143,DISABILITY INS,162,1137
+General Government,HR,5143,EQUIPMENT OPERATING EXPENSE,355,2000
+General Government,HR,5143,FICA,131,20061
+General Government,HR,5143,HEALTH INS,160,79872
+General Government,HR,5143,INSURANCE ISF ALLOCATION,572,2745
+General Government,HR,5143,IT CAPITAL ISF ALLOCATION,573,1220
+General Government,HR,5143,IT OPERATING ISF ALLOCATION,570,24795
+General Government,HR,5143,LIFE INS,161,698
+General Government,HR,5143,LONGEVITY,135,585
+General Government,HR,5143,OFFICE SUPPLIES & POSTAGE,310,500
+General Government,HR,5143,OPERATING MATERIALS & SUPP,340,1300
+General Government,HR,5143,OTHER CONTRACTUAL SERVICES,290,8000
+General Government,HR,5143,PER DIEMS - CEAC,140,1600
+General Government,HR,5143,PROFESSIONAL SERVICES,210,1625
+General Government,HR,5143,"PUBLICATIONS, DUES",320,1810
+General Government,HR,5143,RECRUITMENT & TEST - FD,252,8440
+General Government,HR,5143,RECRUITMENT & TEST - GEN,250,4340
+General Government,HR,5143,RECRUITMENT & TEST - HIGHWAY,253,1815
+General Government,HR,5143,RECRUITMENT & TEST - PD,251,13800
+General Government,HR,5143,SALARIES & WAGES-HR,110,261647
+General Government,HR,5143,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,29060
+General Government,HR,5143,TRAINING & TRAVEL,325,4230
+General Government,HR,5143,TUITION REIMBURSEMENT,326,1505
+General Government,HR,5143,VEHICLE USE REIMBURSEMENT,330,245
+General Government,HR,5143,WRS,132,18881
+General Government,Interdepartmental,5190,BAD DEBT EXPENSE,991,3000
+General Government,Interdepartmental,5190,CONTINGENCY - DESIGNATED,901,9000
+General Government,Interdepartmental,5190,CONTINGENCY - UNDESIGNATED,900,25000
+General Government,Interdepartmental,5190,DEBT COLLECTION EXPENSE,255,2000
+General Government,Interdepartmental,5190,EMPLOYEE RECOG & MEMORIALS,380,5050
+General Government,Interdepartmental,5190,EMPLOYEE RETIREMENT RESERVE,189,160000
+General Government,Interdepartmental,5190,FICA,131,12240
+General Government,Interdepartmental,5190,OFFICE SUPPLIES - INTERDEPT,310,12000
+General Government,Interdepartmental,5190,SAFETY & HEALTH PROGRAMS,381,100
+General Government,Interdepartmental,5190,SPECIAL ASSESSMENTS-CITY,735,30
+General Government,Legal,5130,DENTAL INS,163,1412
+General Government,Legal,5130,DISABILITY INS,162,400
+General Government,Legal,5130,FICA,131,12177
+General Government,Legal,5130,HEALTH INS,160,26624
+General Government,Legal,5130,INSURANCE ISF ALLOCATION,572,1520
+General Government,Legal,5130,IT CAPITAL ISF ALLOCATION,573,305
+General Government,Legal,5130,IT OPERATING ISF ALLOCATION,570,6200
+General Government,Legal,5130,LIFE INS,161,153
+General Government,Legal,5130,OPERATING MATERIALS & SUPPLIES,340,600
+General Government,Legal,5130,OUTSIDE LEGAL COUNSEL,203,50000
+General Government,Legal,5130,PUBLICATIONS & DUES,320,5375
+General Government,Legal,5130,SALARIES & WAGES - LEGAL DEPT,110,159172
+General Government,Legal,5130,TRAINING & TRAVEL,325,5200
+General Government,Legal,5130,VEHICLE USE REIMBURSEMENT,330,560
+General Government,Legal,5130,WRS,132,11460
+General Government,Mayor & Council,5110,FICA,131,3863
+General Government,Mayor & Council,5110,INSURANCE ISF ALLOCATION,572,545
+General Government,Mayor & Council,5110,IT CAPITAL ISF ALLOCATION,573,305
+General Government,Mayor & Council,5110,IT OPERATING ISF ALLOCATION,570,9720
+General Government,Mayor & Council,5110,OFFICE SUPPLIES & POSTAGE,310,500
+General Government,Mayor & Council,5110,OPERATING MATERIALS & SUPPLIES,340,1650
+General Government,Mayor & Council,5110,PER DIEMS - YOUTH COMM,140,1680
+General Government,Mayor & Council,5110,PUBLIC INFORMATION & EDUCATION,345,1500
+General Government,Mayor & Council,5110,PUBLICATIONS & DUES,320,20550
+General Government,Mayor & Council,5110,SALARIES & WAGES - MAYOR & CC,110,50500
+General Government,Mayor & Council,5110,TRAINING & TRAVEL,325,5450
+General Government,Mayor & Council,5110,VEHICLE USE REIMBURSEMENT,330,110
+General Government,Municipal Court,5120,DENTAL INS,163,2118
+General Government,Municipal Court,5120,DISABILITY INS,162,400
+General Government,Municipal Court,5120,FICA,131,11243
+General Government,Municipal Court,5120,HEALTH INS,160,26624
+General Government,Municipal Court,5120,INSURANCE ISF ALLOCATION,572,1315
+General Government,Municipal Court,5120,IT CAPITAL ISF ALLOCATION,573,915
+General Government,Municipal Court,5120,IT OPERATING ISF ALLOCATION,570,18155
+General Government,Municipal Court,5120,LIFE INS,161,236
+General Government,Municipal Court,5120,LONGEVITY BENEFIT,135,900
+General Government,Municipal Court,5120,OFFICE SUPPLIES & POSTAGE,310,3730
+General Government,Municipal Court,5120,OPERATING MATERIALS & SUPPLIES,340,2600
+General Government,Municipal Court,5120,OTHER - DOT SUSPENSION FEES,390,2000
+General Government,Municipal Court,5120,OTHER CONTRACTUAL SERVICES,290,3000
+General Government,Municipal Court,5120,PT/LTE/SEASONAL WAGES,120,6139
+General Government,Municipal Court,5120,PUBLICATIONS & DUES,320,260
+General Government,Municipal Court,5120,SALARIES & WAGES - MUN COURT,110,139932
+General Government,Municipal Court,5120,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,205
+General Government,Municipal Court,5120,TRAINING & TRAVEL,325,2285
+General Government,Municipal Court,5120,VEHICLE USE REIMBURSEMENT,330,300
+General Government,Municipal Court,5120,WRS,132,6447
+General Government,Sustainability,5147,DENTAL INS,163,709
+General Government,Sustainability,5147,DISABILITY INS,162,201
+General Government,Sustainability,5147,FICA,131,3125
+General Government,Sustainability,5147,INSURANCE ISF ALLOCATION,572,1438
+General Government,Sustainability,5147,IT CAPITAL ISF ALLOCATION,573,150
+General Government,Sustainability,5147,IT OPERATING ISF ALLOCATION,570,3255
+General Government,Sustainability,5147,LIFE INS,161,39
+General Government,Sustainability,5147,OPERATING MATERIALS & SUPP,340,900
+General Government,Sustainability,5147,PER DIEMS - COMMISSIONS & BDS,140,1200
+General Government,Sustainability,5147,PROFESSIONAL SERVICES,210,3000
+General Government,Sustainability,5147,PUBLIC INFORMATION & EDUCATION,345,100
+General Government,Sustainability,5147,"PUBLICATIONS, DUES",320,475
+General Government,Sustainability,5147,SALARIES & WAGES-SUSTAINABILIT,110,40855
+General Government,Sustainability,5147,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,250
+General Government,Sustainability,5147,TRAINING & TRAVEL,325,1000
+General Government,Sustainability,5147,VEHICLE USE REIMBURSEMENT,330,280
+General Government,Sustainability,5147,WRS,132,2942
+Parks & Recreation,Forestry,5691,DENTAL INS,163,1412
+Parks & Recreation,Forestry,5691,DISABILITY INS,162,400
+Parks & Recreation,Forestry,5691,EQUIPMENT EXPENSE,355,1150
+Parks & Recreation,Forestry,5691,FICA,131,7828
+Parks & Recreation,Forestry,5691,GASOLINE/DIESEL FUEL,397,500
+Parks & Recreation,Forestry,5691,HEALTH INS,160,26624
+Parks & Recreation,Forestry,5691,INSURANCE ISF ALLOCATION,572,2880
+Parks & Recreation,Forestry,5691,IT CAPITAL ISF ALLOCATION,573,610
+Parks & Recreation,Forestry,5691,IT OPERATING ISF ALLOCATION,570,13570
+Parks & Recreation,Forestry,5691,LIFE INS,161,249
+Parks & Recreation,Forestry,5691,LTE/SEASONAL WAGES,120,7985
+Parks & Recreation,Forestry,5691,OFFICE SUPPLIES & POSTAGE,310,200
+Parks & Recreation,Forestry,5691,OPERATING MATERIALS & SUPPLIES,340,4700
+Parks & Recreation,Forestry,5691,OTHER CONTRACTUAL,290,44000
+Parks & Recreation,Forestry,5691,PER DIEMS - TREE ADVISORY COMM,140,1200
+Parks & Recreation,Forestry,5691,PUBLIC NOTICES/ADS,250,400
+Parks & Recreation,Forestry,5691,"PUBLICATIONS, DUES",320,500
+Parks & Recreation,Forestry,5691,SALARIES & WAGES - FORESTRY,110,94338
+Parks & Recreation,Forestry,5691,TRAINING & TRAVEL,325,1500
+Parks & Recreation,Forestry,5691,"VEHICLE EXPENSE (G&O, REPAIRS)",335,500
+Parks & Recreation,Forestry,5691,WRS,132,6792
+Parks & Recreation,Parks Department,5520,BUILDING REPAIRS & MAINTENANCE,360,22150
+Parks & Recreation,Parks Department,5520,DENTAL INS,163,8499
+Parks & Recreation,Parks Department,5520,DISABILITY INS,162,2773
+Parks & Recreation,Parks Department,5520,EQUIPMENT EXPENSE,355,12550
+Parks & Recreation,Parks Department,5520,EQUIPMENT REPLACEMENT RESERVE,395,5695
+Parks & Recreation,Parks Department,5520,FICA,131,51502
+Parks & Recreation,Parks Department,5520,GASOLINE/DIESEL FUEL,397,34000
+Parks & Recreation,Parks Department,5520,GOLF COURSE MAINTENANCE,289,56000
+Parks & Recreation,Parks Department,5520,HEALTH INS,160,160255
+Parks & Recreation,Parks Department,5520,INSURANCE ISF ALLOCATION,572,37534
+Parks & Recreation,Parks Department,5520,IT CAPITAL ISF ALLOCATION,573,3585
+Parks & Recreation,Parks Department,5520,IT OPERATING ISF ALLOCATION,570,55030
+Parks & Recreation,Parks Department,5520,LEASE/RENTAL COSTS,505,2500
+Parks & Recreation,Parks Department,5520,LIFE INS,161,2317
+Parks & Recreation,Parks Department,5520,LONGEVITY,135,3682
+Parks & Recreation,Parks Department,5520,LTE/SEASONAL WAGES,120,61163
+Parks & Recreation,Parks Department,5520,OFFICE SUPPLIES & POSTAGE,310,550
+Parks & Recreation,Parks Department,5520,OPERATING MATERIALS & SUPPLIES,340,17300
+Parks & Recreation,Parks Department,5520,OTHER CONTRACTUAL,290,139000
+Parks & Recreation,Parks Department,5520,OVERTIME,115,25602
+Parks & Recreation,Parks Department,5520,PARKS ON CALL PAY,191,10661
+Parks & Recreation,Parks Department,5520,PER DIEMS - PARKS COMMISSION,140,2220
+Parks & Recreation,Parks Department,5520,PUBLIC NOTICES/ADS,250,750
+Parks & Recreation,Parks Department,5520,"PUBLICATIONS, DUES",320,250
+Parks & Recreation,Parks Department,5520,Parks Holiday Premium,190,6072
+Parks & Recreation,Parks Department,5520,REPAIR & MAINT SUPPLIES,350,41750
+Parks & Recreation,Parks Department,5520,SALARIES & WAGES - PARKS DEPT,110,566054
+Parks & Recreation,Parks Department,5520,TRAINING & TRAVEL,325,7875
+Parks & Recreation,Parks Department,5520,UNIFORMS & PROTECTIVE GEAR,323,9300
+Parks & Recreation,Parks Department,5520,UTIL (SHELTERS) & TELEPHONE,365,62000
+Parks & Recreation,Parks Department,5520,"VEHICLE EXPENSE (G&O, REPAIRS)",335,7000
+Parks & Recreation,Parks Department,5520,WRS,132,43567
+Parks & Recreation,Recreation & Leisure,5530,DENTAL INS,163,1923
+Parks & Recreation,Recreation & Leisure,5530,DISABILITY INS,162,753
+Parks & Recreation,Recreation & Leisure,5530,FICA,131,16910
+Parks & Recreation,Recreation & Leisure,5530,GASOLINE/DIESEL FUEL,397,525
+Parks & Recreation,Recreation & Leisure,5530,HEALTH INS,160,37457
+Parks & Recreation,Recreation & Leisure,5530,INSURANCE ISF ALLOCATION,572,8370
+Parks & Recreation,Recreation & Leisure,5530,IT CAPITAL ISF ALLOCATION,573,1790
+Parks & Recreation,Recreation & Leisure,5530,IT OPERATING ISF ALLOCATION,570,21315
+Parks & Recreation,Recreation & Leisure,5530,LIFE INS,161,296
+Parks & Recreation,Recreation & Leisure,5530,LONGEVITY,135,765
+Parks & Recreation,Recreation & Leisure,5530,OFFICE SUPPLIES & POSTAGE,310,275
+Parks & Recreation,Recreation & Leisure,5530,OTHER CONTRACTUAL SERVICES,290,70000
+Parks & Recreation,Recreation & Leisure,5530,OVERTIME,115,2466
+Parks & Recreation,Recreation & Leisure,5530,PT/LTE/SEASONAL WAGES,120,65809
+Parks & Recreation,Recreation & Leisure,5530,PUBLIC INFORMATION & EDUCATION,345,5200
+Parks & Recreation,Recreation & Leisure,5530,"PUBLICATIONS, DUES",320,800
+Parks & Recreation,Recreation & Leisure,5530,RECREATION PROGRAMS EXPENSE,387,30000
+Parks & Recreation,Recreation & Leisure,5530,SALARIES & WAGES - RECREATION,110,152002
+Parks & Recreation,Recreation & Leisure,5530,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,5500
+Parks & Recreation,Recreation & Leisure,5530,TRAINING & TRAVEL,325,1400
+Parks & Recreation,Recreation & Leisure,5530,VEHICLE OPERATING EXPENSE,335,500
+Parks & Recreation,Recreation & Leisure,5530,WRS,132,11177
+Planning,Economic Development,5670,COMMUNICATIONS EXPENSE,363,410
+Planning,Economic Development,5670,DENTAL INS,163,3336
+Planning,Economic Development,5670,DISABILITY INS,162,1200
+Planning,Economic Development,5670,EDC Holiday Premium,190,209
+Planning,Economic Development,5670,FICA,131,26342
+Planning,Economic Development,5670,HEALTH INS,160,64081
+Planning,Economic Development,5670,INSURANCE ISF ALLOCATION,572,9735
+Planning,Economic Development,5670,IT CAPITAL ISF ALLOCATION,573,915
+Planning,Economic Development,5670,IT OPERATING ISF ALLOCATION,570,25410
+Planning,Economic Development,5670,LIFE INS,161,1733
+Planning,Economic Development,5670,LONGEVITY,135,2610
+Planning,Economic Development,5670,OFFICE SUPPLIES & POSTAGE,310,1675
+Planning,Economic Development,5670,OPERATING MATERIALS & SUPPLIES,340,1250
+Planning,Economic Development,5670,PER DIEMS - ECON DEV COMM,140,1080
+Planning,Economic Development,5670,"PUBLICATIONS, DUES",320,2095
+Planning,Economic Development,5670,SALARIES & WAGES - EDC,110,341520
+Planning,Economic Development,5670,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,1440
+Planning,Economic Development,5670,TRAINING & TRAVEL,325,3175
+Planning,Economic Development,5670,VEHICLE USE REIMBURSEMENT,330,840
+Planning,Economic Development,5670,WRS,132,24792
+Planning,Zoning & Planning,5630,DENTAL INS,163,3336
+Planning,Zoning & Planning,5630,DISABILITY INS,162,1129
+Planning,Zoning & Planning,5630,FICA,131,25337
+Planning,Zoning & Planning,5630,HEALTH INS,160,64081
+Planning,Zoning & Planning,5630,INSURANCE ISF ALLOCATION,572,2920
+Planning,Zoning & Planning,5630,IT CAPITAL ISF ALLOCATION,573,1220
+Planning,Zoning & Planning,5630,IT OPERATING ISF ALLOCATION,570,32255
+Planning,Zoning & Planning,5630,LIFE INS,161,752
+Planning,Zoning & Planning,5630,OFFICE SUPPLIES & POSTAGE,310,1600
+Planning,Zoning & Planning,5630,OPERATING MATERIALS & SUPPLIES,340,500
+Planning,Zoning & Planning,5630,OVERTIME,115,7270
+Planning,Zoning & Planning,5630,PER DIEMS - COMMISSIONS & BDS,140,4090
+Planning,Zoning & Planning,5630,PROFESSIONAL SERVICES,210,5000
+Planning,Zoning & Planning,5630,PT/LTE/SEASONAL WAGES,120,12698
+Planning,Zoning & Planning,5630,PUBLIC INFORMATION & EDUCATION,345,1000
+Planning,Zoning & Planning,5630,PUBLIC NOTICES/ADS,250,6000
+Planning,Zoning & Planning,5630,"PUBLICATIONS, DUES",320,3600
+Planning,Zoning & Planning,5630,SALARIES & WAGES - PLANNING,110,311240
+Planning,Zoning & Planning,5630,TRAINING & TRAVEL,325,8400
+Planning,Zoning & Planning,5630,VEHICLE USE REIMBURSEMENT,330,700
+Planning,Zoning & Planning,5630,WRS,132,22933
+Police,Police,5210,COMMUNICATIONS EXPENSE,363,3000
+Police,Police,5210,DENTAL INS,163,73648
+Police,Police,5210,DISABILITY INS,162,25325
+Police,Police,5210,EQUIPMENT EXPENSE,355,13500
+Police,Police,5210,EQUIPMENT REPLACEMENT RESERVE,395,31588
+Police,Police,5210,FICA,131,502227
+Police,Police,5210,FTO DIFFERENTIAL,125,2000
+Police,Police,5210,GASOLINE/DIESEL FUEL,397,133000
+Police,Police,5210,HEALTH INS,160,1355609
+Police,Police,5210,HOLIDAY PREMIUM,190,34988
+Police,Police,5210,INSURANCE ISF ALLOCATION,572,201385
+Police,Police,5210,INVESTIGATIVE SUPPLIES,384,22700
+Police,Police,5210,IT CAPITAL ISF ALLOCATION,573,29550
+Police,Police,5210,IT OPERATING ISF ALLOCATION,570,454030
+Police,Police,5210,K-9 UNIT,392,1800
+Police,Police,5210,LIFE INS,161,8866
+Police,Police,5210,LONGEVITY,135,11385
+Police,Police,5210,MPSIS ALLOCATION,571,184795
+Police,Police,5210,OFFICE SUPPLIES & POSTAGE,310,13000
+Police,Police,5210,ON CALL PAY,191,6070
+Police,Police,5210,OPERATING MATERIALS & SUPPLIES,340,29750
+Police,Police,5210,OTHER CONTRACTUAL/CROSS GUARDS,290,5000
+Police,Police,5210,OVERTIME,115,462687
+Police,Police,5210,PROFESSIONAL SERVICES,210,40800
+Police,Police,5210,PROTECTIVE GEAR,324,26925
+Police,Police,5210,PT/LTE/SEASONAL WAGES,120,9924
+Police,Police,5210,PUBLIC INFORMATION & EDUCATION,345,12500
+Police,Police,5210,"PUBLICATIONS, DUES",320,2500
+Police,Police,5210,REPAIR & MAINT SUPPLIES,350,1000
+Police,Police,5210,REPAIRS & MAINT - BY OTHERS,240,4300
+Police,Police,5210,SALARIES & WAGES - POLICE,110,5997501
+Police,Police,5210,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,30050
+Police,Police,5210,TAXABLE CLOTH ALLOW/STIPEND,164,40500
+Police,Police,5210,TRAINING & TRAVEL,325,58500
+Police,Police,5210,TUITION REIMBURSEMENT,326,1360
+Police,Police,5210,UNIFORMS & PROTECTIVE GEAR,323,900
+Police,Police,5210,"VEHICLE EXPENSE (G&O, REPAIRS)",335,55000
+Police,Police,5210,WRS,132,910030
+Police,Police,5210,YMCA MEMBERSHIP,327,8475
+Police,Police Evidence,5166,REPAIR & MAINT SUPPLIES,350,500
+Police,Police Evidence,5166,REPAIRS & MAINT - BY OTHERS,240,7000
+Police,Police Evidence,5166,UTILITIES,365,3200
+Police,Police Facility,5169,BLDG CUSTODIAL SUPPLIES,360,8000
+Police,Police Facility,5169,DENTAL INS,163,1412
+Police,Police Facility,5169,DISABILITY INS,162,329
+Police,Police Facility,5169,EQUIPMENT EXPENSE,355,15000
+Police,Police Facility,5169,FICA,131,4056
+Police,Police Facility,5169,HEALTH INS,160,26624
+Police,Police Facility,5169,INSURANCE ISF ALLOCATION,572,33657
+Police,Police Facility,5169,IT OPERATING ISF ALLOCATION,570,3880
+Police,Police Facility,5169,LIFE INS,161,76
+Police,Police Facility,5169,OTHER CONTRACTUAL SERVICES,290,750
+Police,Police Facility,5169,OVERTIME,115,3566
+Police,Police Facility,5169,REPAIR & MAINT SUPPLIES,350,2500
+Police,Police Facility,5169,REPAIRS & MAINT - BY OTHERS,240,39200
+Police,Police Facility,5169,SALARIES & WAGES-PD FACILITY,110,49454
+Police,Police Facility,5169,UNIFORMS & PROTECTIVE GEAR,323,400
+Police,Police Facility,5169,UTILITIES,365,105000
+Police,Police Facility,5169,WRS,132,3817
+Public Works,Public Safety,5300,COMMUNICATIONS EXPENSE,363,1500
+Public Works,Public Safety,5300,DENTAL INS,163,14582
+Public Works,Public Safety,5300,DISABILITY INS,162,5352
+Public Works,Public Safety,5300,FICA,131,89356
+Public Works,Public Safety,5300,GASOLINE/DIESEL FUEL,397,71300
+Public Works,Public Safety,5300,HEALTH INS,160,268479
+Public Works,Public Safety,5300,INSURANCE ISF ALLOCATION,572,78964
+Public Works,Public Safety,5300,IT CAPITAL ISF ALLOCATION,573,5190
+Public Works,Public Safety,5300,IT OPERATING ISF ALLOCATION,570,149875
+Public Works,Public Safety,5300,LIFE INS,161,3064
+Public Works,Public Safety,5300,LONGEVITY,135,4195
+Public Works,Public Safety,5300,OFFICE SUPPLIES & POSTAGE,310,2100
+Public Works,Public Safety,5300,OPERATING MATERIALS & SUPPLIES,340,1500
+Public Works,Public Safety,5300,OVERTIME,115,56766
+Public Works,Public Safety,5300,PER DIEMS - BD OF PUBLIC WKS,140,3050
+Public Works,Public Safety,5300,POLES & LIGHTS REPLACE STOCK,371,22500
+Public Works,Public Safety,5300,PROFESSIONAL SERVICES,210,10880
+Public Works,Public Safety,5300,PT/LTE/SEASONAL WAGES,120,13468
+Public Works,Public Safety,5300,PUBLIC NOTICES/ADS,250,1100
+Public Works,Public Safety,5300,"PUBLICATIONS, DUES",320,10510
+Public Works,Public Safety,5300,PW Holiday Premium,190,5838
+Public Works,Public Safety,5300,PW ON CALL PAY,191,10661
+Public Works,Public Safety,5300,REPAIR & MAINT SUPPLIES,350,42200
+Public Works,Public Safety,5300,ROAD MAINTENANCE,375,403650
+Public Works,Public Safety,5300,ROADWAY SUPPLIES,370,179630
+Public Works,Public Safety,5300,SALARIES & WAGES - PUBLIC WKS,110,1077117
+Public Works,Public Safety,5300,"SOFTWARE, SUBSCRIPTIONS, MAINT",245,32350
+Public Works,Public Safety,5300,STREET LIGHT MAINTENANCE,225,30000
+Public Works,Public Safety,5300,STREET LIGHT SERVICE - MG&E,220,260000
+Public Works,Public Safety,5300,TRAFFIC SIGNAL MAINTENANCE,230,29000
+Public Works,Public Safety,5300,TRAINING & TRAVEL,325,17710
+Public Works,Public Safety,5300,UNIFORMS & PROTECTIVE GEAR,323,19570
+Public Works,Public Safety,5300,UTILITIES,365,250
+Public Works,Public Safety,5300,"VEHICLE EXPENSE (G&O, REPAIRS)",335,54500
+Public Works,Public Safety,5300,VEHICLE USE REIMBURSEMENT,330,500
+Public Works,Public Safety,5300,WRS,132,83049

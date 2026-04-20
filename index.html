@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitchburg Budget Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #243459;
+    --gold: #c8a84b;
+    --gold-light: #e8c96a;
+    --cream: #f7f4ef;
+    --cream-dark: #ede9e1;
+    --text: #1a2744;
+    --text-muted: #6b7280;
+    --white: #ffffff;
+    --shadow: 0 4px 24px rgba(26,39,68,0.10);
+    --shadow-lg: 0 8px 48px rgba(26,39,68,0.16);
+    --radius: 12px;
+
+    --cat-police: #2563a8;
+    --cat-fire: #c0392b;
+    --cat-general: #1a6b5a;
+    --cat-publicworks: #7c4dff;
+    --cat-parks: #2e7d32;
+    --cat-buildings: #b45309;
+    --cat-community: #0891b2;
+    --cat-planning: #7b3f9e;
+    --cat-debt: #6b7280;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--navy);
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .header-seal {
+    width: 52px; height: 52px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--white);
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+  header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  main { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  /* ── LOOKUP CARD ── */
+  .lookup-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 36px 40px;
+    margin-bottom: 36px;
+  }
+  .lookup-card h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: var(--navy);
+  }
+  .lookup-card .subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 200px;
+  }
+  .input-group label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .input-group input {
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 8px;
+    padding: 11px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--cream);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .input-group input:focus { border-color: var(--navy); background: var(--white); }
+  .input-group input::placeholder { color: #adb5bd; }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .btn-primary:hover { background: var(--navy-light); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* Tax hint box */
+  .tax-hint {
+    margin-top: 20px;
+    background: #eff6ff;
+    border: 1.5px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    color: #1e40af;
+    line-height: 1.6;
+  }
+  .tax-hint strong { display: block; margin-bottom: 4px; }
+  .tax-hint a { color: #1d4ed8; font-weight: 600; }
+
+  /* ── RESULTS SECTION ── */
+  #results { display: none; }
+
+  .results-header {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 28px 36px;
+    margin-bottom: 28px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .results-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+  .results-header p { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+  .results-total {
+    text-align: right;
+  }
+  .results-total .amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .results-total .label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+  }
+
+  /* ── CHARTS ROW ── */
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 720px) { .charts-row { grid-template-columns: 1fr; } }
+
+  .chart-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px 28px;
+  }
+  .chart-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 18px;
+  }
+  .chart-wrap { position: relative; }
+  #pieChart { max-height: 280px; }
+  #barChart { max-height: 280px; }
+
+  /* ── DRILLDOWN TABLE ── */
+  .table-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .table-card-header {
+    padding: 20px 28px;
+    border-bottom: 1.5px solid var(--cream-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .table-card-header h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem;
+    color: var(--navy);
+  }
+  .table-card-header p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .expand-all-btn {
+    background: none;
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .expand-all-btn:hover { border-color: var(--navy); color: var(--navy); }
+
+  .category-row {
+    border-bottom: 1.5px solid var(--cream-dark);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .category-row:last-child { border-bottom: none; }
+  .category-row:hover > .category-header { background: #f8f7f5; }
+
+  .category-header {
+    display: grid;
+    grid-template-columns: 32px 1fr auto auto auto;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    transition: background 0.15s;
+  }
+  .cat-chevron {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transition: transform 0.25s;
+    justify-self: center;
+  }
+  .category-row.open .cat-chevron { transform: rotate(90deg); }
+
+  .cat-color-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    justify-self: center;
+    display: none;
+  }
+
+  .cat-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cat-badge {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .cat-pct {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    min-width: 52px;
+    text-align: right;
+  }
+  .cat-bar-wrap {
+    width: 120px;
+  }
+  .cat-bar-bg {
+    height: 6px;
+    background: var(--cream-dark);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .cat-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .cat-amount {
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-width: 90px;
+    text-align: right;
+  }
+
+  /* Department rows */
+  .dept-rows { display: none; }
+  .category-row.open .dept-rows { display: block; }
+
+  .dept-section { border-top: 1px solid var(--cream-dark); }
+  .dept-header {
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 28px 11px 60px;
+    background: #fbfaf8;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .dept-header:hover { background: #f4f2ee; }
+  .dept-chevron {
+    font-size: 0.7rem;
+    color: #aaa;
+    transition: transform 0.2s;
+    justify-self: center;
+  }
+  .dept-section.open .dept-chevron { transform: rotate(90deg); }
+  .dept-name { font-size: 0.88rem; font-weight: 500; color: var(--text); }
+  .dept-amount { font-size: 0.88rem; font-weight: 600; color: var(--text); text-align: right; }
+
+  /* Line item rows */
+  .line-items { display: none; }
+  .dept-section.open .line-items { display: block; }
+
+  .line-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 8px 28px 8px 88px;
+    border-top: 1px solid #f0ede8;
+    font-size: 0.82rem;
+  }
+  .line-item:hover { background: #fdfcfa; }
+  .line-name { color: var(--text-muted); }
+  .line-amount { font-weight: 500; color: var(--text); text-align: right; white-space: nowrap; }
+
+  /* ── FOOTNOTE ── */
+  .footnote {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  .footnote a { color: var(--navy); }
+
+  /* ── CATEGORY COLORS ── */
+  .color-police       { background: var(--cat-police); }
+  .color-fire         { background: var(--cat-fire); }
+  .color-general      { background: var(--cat-general); }
+  .color-publicworks  { background: var(--cat-publicworks); }
+  .color-parks        { background: var(--cat-parks); }
+  .color-buildings    { background: var(--cat-buildings); }
+  .color-community    { background: var(--cat-community); }
+  .color-planning     { background: var(--cat-planning); }
+  .color-debt         { background: var(--cat-debt); }
+
+  .error-msg {
+    background: #fef2f2;
+    border: 1.5px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: #991b1b;
+    font-size: 0.88rem;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 20px; }
+    main { padding: 24px 16px 60px; }
+    .lookup-card { padding: 24px 20px; }
+    .results-header { padding: 20px 24px; }
+    .cat-bar-wrap { display: none; }
+    .category-header { grid-template-columns: 24px 1fr auto auto; }
+    .dept-header { padding-left: 40px; }
+    .line-item { padding-left: 56px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-seal">🏛️</div>
+  <div>
+    <h1>Fitchburg Budget Explorer</h1>
+    <p>2026 General Fund · City of Fitchburg, Wisconsin</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- LOOKUP CARD -->
+  <div class="lookup-card">
+    <h2>Where does your property tax go?</h2>
+    <p class="subtitle">Enter your assessed property value to see exactly how your City of Fitchburg property tax is allocated across every city service and department.</p>
+
+    <div class="input-row">
+      <div class="input-group">
+        <label>Assessed Property Value ($)</label>
+        <input type="text" id="assessedValue" placeholder="e.g. 450,000" inputmode="numeric">
+      </div>
+      <button class="btn-primary" onclick="calculate()">Show My Breakdown</button>
+    </div>
+
+    <div class="tax-hint">
+      <strong>📋 How to find your assessed value</strong>
+      Look up your property on <a href="https://accessdane.danecounty.gov/Parcel" target="_blank">AccessDane</a> or <a href="https://www.assessordata.org/" target="_blank">AssessorData.org</a> (search Dane County). Your assessed value appears on your property record — it may differ from your home's market value. Your city tax is calculated using a mill rate of <strong>$5.4236 per $1,000</strong> of assessed value.
+    </div>
+
+    <div id="errorMsg" class="error-msg" style="display:none;"></div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results">
+
+    <div class="results-header">
+      <div>
+        <h2>Your 2026 City Tax Breakdown</h2>
+        <p id="resultsSubtitle">Based on assessed value of $—</p>
+      </div>
+      <div class="results-total">
+        <div class="amount" id="totalTax">$—</div>
+        <div class="label">estimated city property tax</div>
+      </div>
+    </div>
+
+    <div class="charts-row">
+      <div class="chart-card">
+        <h3>Spending by Category</h3>
+        <div class="chart-wrap">
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h3>Share of Budget</h3>
+        <div class="chart-wrap">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-card-header">
+        <div>
+          <h3>Detailed Breakdown</h3>
+          <p>Click any category to expand departments and line items</p>
+        </div>
+        <button class="expand-all-btn" onclick="toggleAll()">Expand All</button>
+      </div>
+      <div id="tableBody"></div>
+    </div>
+
+    <p class="footnote">
+      Estimated city tax only — does not include county, school district, or technical college portions of your property tax bill.<br>
+      Mill rate: $5.4236 per $1,000 assessed value (2025 tax year, City of Fitchburg). Budget figures from the 2026 Adopted General Fund Budget.<br>
+      Source data: <a href="https://www.fitchburgwi.gov" target="_blank">fitchburgwi.gov</a> · <a href="https://accessdane.danecounty.gov" target="_blank">AccessDane</a>
+    </p>
+
+  </div>
+</main>
+
+<script>
+// ── CONFIG ──
+const MILL_RATE = 5.4236 / 1000;
+const BUDGET_CSV = 'budget_2026.csv';
+
+const CATEGORY_META = {
+  'Police':              { color: '#2563a8', cls: 'color-police' },
+  'Fire/EMS':            { color: '#c0392b', cls: 'color-fire' },
+  'General Government':  { color: '#1a6b5a', cls: 'color-general' },
+  'Public Works':        { color: '#7c4dff', cls: 'color-publicworks' },
+  'Parks & Recreation':  { color: '#2e7d32', cls: 'color-parks' },
+  'Buildings & Grounds': { color: '#b45309', cls: 'color-buildings' },
+  'Community':           { color: '#0891b2', cls: 'color-community' },
+  'Planning':            { color: '#7b3f9e', cls: 'color-planning' },
+  'Capital Debt':        { color: '#6b7280', cls: 'color-debt' },
+};
+
+const CATEGORY_ORDER = [
+  'Police','Fire/EMS','General Government','Public Works',
+  'Parks & Recreation','Buildings & Grounds','Community','Planning','Capital Debt'
+];
+
+// ── STATE ──
+let budgetData = null;
+let pieChart = null;
+let barChart = null;
+let allExpanded = false;
+
+// ── LOAD DATA ──
+Papa.parse(BUDGET_CSV, {
+  download: true,
+  header: true,
+  dynamicTyping: true,
+  complete: (results) => { budgetData = results.data.filter(r => r.category && r.amount > 0); }
+});
+
+// ── FORMAT HELPERS ──
+function fmt(n) {
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+function fmtAssessed(s) {
+  return parseInt(s.replace(/[^0-9]/g, ''));
+}
+
+// ── CALCULATE ──
+function calculate() {
+  const raw = document.getElementById('assessedValue').value;
+  const assessed = fmtAssessed(raw);
+  const errEl = document.getElementById('errorMsg');
+
+  if (!assessed || assessed < 1000) {
+    errEl.style.display = 'block';
+    errEl.textContent = 'Please enter a valid assessed property value.';
+    return;
+  }
+  errEl.style.display = 'none';
+
+  if (!budgetData) {
+    errEl.style.display = 'block';
+    errEl.textContent = 'Budget data is still loading — please try again in a moment.';
+    return;
+  }
+
+  const cityTax = assessed * MILL_RATE;
+  const totalBudget = budgetData.reduce((s, r) => s + r.amount, 0);
+
+  // Build category → dept → line items structure
+  const tree = {};
+  for (const row of budgetData) {
+    if (!tree[row.category]) tree[row.category] = {};
+    if (!tree[row.category][row.department]) tree[row.category][row.department] = [];
+    tree[row.category][row.department].push(row);
+  }
+
+  // Category totals
+  const catTotals = {};
+  for (const [cat, depts] of Object.entries(tree)) {
+    catTotals[cat] = Object.values(depts).flat().reduce((s, r) => s + r.amount, 0);
+  }
+
+  // Update header
+  document.getElementById('totalTax').textContent = fmt(cityTax);
+  document.getElementById('resultsSubtitle').textContent =
+    `Based on assessed value of ${fmt(assessed)}`;
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  renderCharts(catTotals, totalBudget, cityTax);
+  renderTable(tree, catTotals, totalBudget, cityTax);
+}
+
+// ── CHARTS ──
+function renderCharts(catTotals, totalBudget, cityTax) {
+  const ordered = CATEGORY_ORDER.filter(c => catTotals[c]);
+  const labels = ordered;
+  const taxAmounts = ordered.map(c => (catTotals[c] / totalBudget) * cityTax);
+  const pcts = ordered.map(c => (catTotals[c] / totalBudget) * 100);
+  const colors = ordered.map(c => CATEGORY_META[c]?.color || '#888');
+
+  if (pieChart) pieChart.destroy();
+  if (barChart) barChart.destroy();
+
+  const pieCtx = document.getElementById('pieChart').getContext('2d');
+  pieChart = new Chart(pieCtx, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{
+        data: pcts,
+        backgroundColor: colors,
+        borderWidth: 2,
+        borderColor: '#fff',
+        hoverOffset: 8,
+      }]
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const pct = pcts[ctx.dataIndex].toFixed(1);
+              const amt = fmt(taxAmounts[ctx.dataIndex]);
+              return ` ${pct}%  ·  ${amt}`;
+            }
+          }
+        }
+      },
+      cutout: '60%',
+    }
+  });
+
+  const barCtx = document.getElementById('barChart').getContext('2d');
+  barChart = new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: labels.map(l => l.length > 14 ? l.split(' ') : l),
+      datasets: [{
+        data: taxAmounts.map(a => Math.round(a * 100) / 100),
+        backgroundColor: colors,
+        borderRadius: 5,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => ` ${fmt(ctx.parsed.x)}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: '#f0ede8' },
+          ticks: {
+            callback: v => '$' + v.toLocaleString(),
+            font: { family: 'DM Sans', size: 11 },
+            color: '#9ca3af',
+          }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { font: { family: 'DM Sans', size: 11 }, color: '#374151' }
+        }
+      }
+    }
+  });
+}
+
+// ── TABLE ──
+function renderTable(tree, catTotals, totalBudget, cityTax) {
+  const container = document.getElementById('tableBody');
+  container.innerHTML = '';
+
+  const ordered = CATEGORY_ORDER.filter(c => tree[c]);
+
+  for (const cat of ordered) {
+    const meta = CATEGORY_META[cat] || { color: '#888', cls: 'color-debt' };
+    const catTotal = catTotals[cat];
+    const catTax = (catTotal / totalBudget) * cityTax;
+    const catPct = (catTotal / totalBudget) * 100;
+    const depts = tree[cat];
+
+    const catRow = document.createElement('div');
+    catRow.className = 'category-row';
+    catRow.innerHTML = `
+      <div class="category-header">
+        <span class="cat-chevron">▶</span>
+        <span class="cat-name">
+          <span class="cat-badge ${meta.cls}"></span>
+          ${cat}
+        </span>
+        <span class="cat-pct">${catPct.toFixed(1)}%</span>
+        <span class="cat-bar-wrap">
+          <div class="cat-bar-bg">
+            <div class="cat-bar-fill ${meta.cls}" style="width:${catPct}%"></div>
+          </div>
+        </span>
+        <span class="cat-amount">${fmt(catTax)}</span>
+      </div>
+      <div class="dept-rows"></div>
+    `;
+
+    const deptRows = catRow.querySelector('.dept-rows');
+
+    // Sort departments by total desc
+    const deptList = Object.entries(depts)
+      .map(([name, items]) => ({ name, items, total: items.reduce((s, r) => s + r.amount, 0) }))
+      .sort((a, b) => b.total - a.total);
+
+    for (const dept of deptList) {
+      const deptTax = (dept.total / totalBudget) * cityTax;
+      const deptSec = document.createElement('div');
+      deptSec.className = 'dept-section';
+
+      // Sort line items by amount desc
+      const sortedItems = [...dept.items].sort((a, b) => b.amount - a.amount);
+      const lineItemsHtml = sortedItems.map(item => {
+        const itemTax = (item.amount / totalBudget) * cityTax;
+        return `<div class="line-item">
+          <span class="line-name">${titleCase(item.expense_name)}</span>
+          <span class="line-amount">${fmt(itemTax)}</span>
+        </div>`;
+      }).join('');
+
+      deptSec.innerHTML = `
+        <div class="dept-header">
+          <span class="dept-chevron">▶</span>
+          <span class="dept-name">${dept.name}</span>
+          <span class="dept-amount">${fmt(deptTax)}</span>
+        </div>
+        <div class="line-items">${lineItemsHtml}</div>
+      `;
+
+      deptSec.querySelector('.dept-header').addEventListener('click', (e) => {
+        e.stopPropagation();
+        deptSec.classList.toggle('open');
+      });
+
+      deptRows.appendChild(deptSec);
+    }
+
+    catRow.querySelector('.category-header').addEventListener('click', () => {
+      catRow.classList.toggle('open');
+    });
+
+    container.appendChild(catRow);
+  }
+}
+
+// ── EXPAND ALL ──
+function toggleAll() {
+  allExpanded = !allExpanded;
+  document.querySelectorAll('.category-row').forEach(r => r.classList.toggle('open', allExpanded));
+  document.querySelectorAll('.dept-section').forEach(r => r.classList.toggle('open', allExpanded));
+  document.querySelector('.expand-all-btn').textContent = allExpanded ? 'Collapse All' : 'Expand All';
+}
+
+// ── UTIL ──
+function titleCase(str) {
+  if (!str) return '';
+  return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// Allow Enter key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') calculate();
+});
+</script>
+</body>
+</html>
