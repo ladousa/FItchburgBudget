@@ -319,7 +319,7 @@ General Government,HR,"Training,Travel, Tuition","Training,Travel, Tuition",TUIT
 General Government,HR,"Training,Travel, Tuition","Training,Travel, Tuition",VEHICLE USE REIMBURSEMENT,245,general
 General Government,Interdepartmental,Contingency,Other Expenses,CONTINGENCY - DESIGNATED,9000,general
 General Government,Interdepartmental,Contingency,Other Expenses,CONTINGENCY - UNDESIGNATED,25000,general
-General Government,Interdepartmental,Debt Collection,Debt Collection,BAD DEBT EXPENSE,3000,general
+General Government,Interdepartmental,Debt Collection,Other Expenses,BAD DEBT EXPENSE,3000,general
 General Government,Interdepartmental,Debt Collection,Other Expenses,DEBT COLLECTION EXPENSE,2000,general
 General Government,Interdepartmental,General Office,General Office,EMPLOYEE RECOG & MEMORIALS,5050,general
 General Government,Interdepartmental,General Office,General Office,OFFICE SUPPLIES - INTERDEPT,12000,general
