@@ -29,11 +29,10 @@ main{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
 .btn-primary{background:var(--navy);color:var(--white);border:none;border-radius:8px;padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;white-space:nowrap;flex-shrink:0}
 .btn-primary:hover{background:var(--navy-light);transform:translateY(-1px)}
 .tax-hint{margin-top:20px;background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:14px 18px;font-size:.85rem;color:#1e40af;line-height:1.6}
-.tax-hint>strong{display:block;margin-bottom:4px}
+.tax-hint>strong:first-child{display:block;margin-bottom:4px}
 .tax-hint a{color:#1d4ed8;font-weight:600}
 .error-msg{background:#fef2f2;border:1.5px solid #fecaca;border-radius:8px;padding:14px 18px;color:#991b1b;font-size:.88rem;margin-top:16px}
 #results{display:none}
-#barChart{height:520px}
 .results-header{background:var(--navy);border-radius:var(--radius);padding:28px 36px;margin-bottom:28px;color:var(--white);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .results-header h2{font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:4px}
 .results-header p{font-size:.85rem;color:rgba(255,255,255,.65)}
@@ -71,13 +70,14 @@ main{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
 .category-row.open>.dept-rows{display:block}
 .single-note{border-top:1px solid var(--cream-dark);padding:12px 28px 12px 52px;display:flex;justify-content:space-between;background:#fbfaf8;font-size:.83rem;color:var(--text-muted);font-style:italic}
 .dept-section{border-top:1px solid var(--cream-dark)}
-.dept-header{display:grid;grid-template-columns:28px 1fr auto auto;align-items:center;gap:12px;padding:11px 28px 11px 52px;background:#fbfaf8;cursor:pointer;transition:background .15s;user-select:none}
+.dept-header{display:grid;grid-template-columns:28px 1fr auto auto auto;align-items:center;gap:12px;padding:11px 28px 11px 52px;background:#fbfaf8;cursor:pointer;transition:background .15s;user-select:none}
 .dept-header:hover{background:#f4f2ee}
 .dept-chevron{font-size:.68rem;color:#aaa;transition:transform .2s;justify-self:center}
 .dept-section.open>.dept-header .dept-chevron{transform:rotate(90deg)}
 .dept-name{font-size:.88rem;font-weight:500}
-.dept-pct{font-size:.82rem;color:var(--text-muted);min-width:46px;text-align:right}
-.dept-amount{font-size:.88rem;font-weight:600;text-align:right}
+.dept-pct{font-size:.82rem;color:var(--text-muted);min-width:52px;text-align:right}
+.dept-bar-wrap{width:110px}
+.dept-amount{font-size:.88rem;font-weight:600;text-align:right;min-width:90px}
 .dept-rows>.exp-section{border-top:1px solid var(--cream-dark)}
 .dept-rows>.exp-section .exp-header{padding-left:52px}
 .exp-rows{display:none}
@@ -215,8 +215,8 @@ function renderCharts(catTax,cityTax){
   });
   barChart=new Chart(document.getElementById('barChart').getContext('2d'),{
     type:'bar',
-    data:{labels:ord,datasets:[{data:taxAmts.map(a=>Math.round(a*100)/100),backgroundColor:colors,borderRadius:5,borderSkipped:false}]},
-    options:{indexAxis:'y',maintainAspectRatio:false,layout:{padding:{right:72}},plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${fmt(ctx.parsed.x)}`}}},scales:{x:{grid:{color:'#f0ede8'},ticks:{callback:v=>'$'+v.toLocaleString(),font:{family:'DM Sans',size:11},color:'#9ca3af'}},y:{grid:{display:false},ticks:{font:{family:'DM Sans',size:11},color:'#374151'}}}},
+    data:{labels:ord,datasets:[{data:taxAmts.map(a=>Math.round(a*100)/100),backgroundColor:colors,borderRadius:5,borderSkipped:false,barThickness:18}]},
+    options:{indexAxis:'y',maintainAspectRatio:true,aspectRatio:1.4,layout:{padding:{right:72}},plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${fmt(ctx.parsed.x)}`}}},scales:{x:{grid:{color:'#f0ede8'},ticks:{callback:v=>'$'+v.toLocaleString(),font:{family:'DM Sans',size:11},color:'#9ca3af'}},y:{grid:{display:false},ticks:{font:{family:'DM Sans',size:11},color:'#374151'}}}},
     plugins:[{id:'barEndLabels',afterDraw(chart){const{ctx}=chart;ctx.save();chart.getDatasetMeta(0).data.forEach((bar,i)=>{ctx.fillStyle='#374151';ctx.font='600 11px "DM Sans",sans-serif';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(fmt(taxAmts[i]),bar.x+6,bar.y);});ctx.restore();}}]
   });
 }
@@ -268,7 +268,7 @@ function renderTable(tree,catTax,fundTax,fbt,cityTax){
           dSec.className='dept-section';
           const dHdr=document.createElement('div');
           dHdr.className='dept-header';
-          dHdr.innerHTML=`<span class="dept-chevron">&#9654;</span><span class="dept-name">${dept.name}</span><span class="dept-pct">${deptPct.toFixed(1)}%</span><span class="dept-amount">${fmt(deptTax)}</span>`;
+          dHdr.innerHTML=`<span class="dept-chevron">&#9654;</span><span class="dept-name">${dept.name}</span><span class="dept-pct">${deptPct.toFixed(1)}%</span><span class="dept-bar-wrap"><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${Math.min(deptPct,100)}%;background:${m.color}"></div></div></span><span class="dept-amount">${fmt(deptTax)}</span>`;
           dSec.appendChild(dHdr);
           const dBody=document.createElement('div');
           dBody.className='exp-rows';
